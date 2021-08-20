@@ -1,0 +1,457 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    margin: 0px;
+    height: 100vh;
+}
+
+body {
+    font-family: Impact;
+    margin: 0px;
+}
+
+header {
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+p { 
+    margin: 20px 150px 0px;
+    line-height: 50px;
+    font-size: 20px;
+    letter-spacing: .05em;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+input {
+    font-family: Impact;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 325px;
+}
+
+button {
+    color: black;
+    background-color: white;
+    border: none;
+    font-family: Impact;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+}
+
+form {
+    margin: 20px 150px;
+}
+
+#success {
+    margin-top: 20vh;
+    text-align: center;
+}
+
+.title {
+    text-decoration: none;
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 20px;
+} 
+
+.title2 {
+    margin: 0 10px 30px; 
+}
+
+.menu {
+    position: fixed;
+    display: inline-block;
+    cursor: pointer;
+    top: 10px;
+    left: 20px;
+    z-index: 2;
+}
+
+.bar {
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.noshow {
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+    background-color: #f1f1f1;
+    width: 175px;
+    overflow: auto;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.noshow a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.menu a:hover {
+    background-color: #ddd;
+}
+  
+.show {
+    display: block;
+}
+
+.navigation {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.back, .top, .next { 
+    color: black;
+    text-decoration: none;  
+    margin: 0px 20px;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+.outfit { 
+    width: 100%;
+    margin-bottom: 15px;
+    height: auto;
+}
+
+.pics {
+    width: 30%;
+    margin: 125px 70px;
+    position: fixed;
+    text-align: center;     
+}
+
+.description {
+    margin-top: 125px;
+    width: 70%;
+    float: right;
+}
+
+.row {
+    display: flex;
+    text-align: center;
+    animation: slide 1s linear 0s 1 normal none;
+}
+
+.box {
+    margin-right: 50px;
+}
+
+.box, .box2 {
+    display: block;
+    border-style: none;
+    height: 100vh;
+    opacity: .6;
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .7s ease-in-out;
+	transition: .7s ease-in-out; 
+}
+
+.box:hover, .box2:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+    opacity: 1;
+}
+
+.star, .blank {
+    font-size: 50px;
+}
+
+.star::before {
+    content: '\2605';
+}
+
+.blank::before {
+    content: '\2606';
+}
+
+.star1 {
+    color: #436332;
+}
+
+.blank1 {
+    color: #436332;
+}
+
+.star2 {
+    color: #94deff;
+}
+
+.blank2 {
+    color: #94deff;
+}
+
+.star3 {
+    color: black;
+}
+
+.blank3 {
+    color: black;
+}
+
+.star4 {
+    color: #ffd900;
+}
+
+.blank4 {
+    color: #ffd900;
+}
+
+.star5 {
+    color: white;
+}
+
+.blank5 {
+    color: white;
+}
+
+@keyframes slide {
+    from {
+        margin-left: 100vw;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}  
+
+@font-face {
+    font-family: 'Anton'; 
+    src: url('/static/Anton/Anton-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+
+@media (max-width: 1200px) {
+
+    p, form {
+        margin: 20px 125px;
+    }
+
+    .noshow a {
+        padding: 10px 16px;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+
+    p, form {
+        margin: 20px 100px; 
+    }
+
+    input {
+        width: 225px;
+    }
+
+    .pics {
+        margin-left: 50px;
+    }
+
+    .outfit {
+        margin-bottom: 10px;
+    }
+
+    .star, .blank {
+        font-size: 40px;
+    }
+
+}
+
+@font-face { 
+    font-family: Anton; 
+    src: url('/static/Anton/Anton-Regular.ttf'); 
+}  
+
+@media (max-width: 850px) {
+
+    body {
+        font-family: Anton;
+    }
+
+    h1, a, input, button {
+        font-family: Anton;
+        font-size: 15px;
+    }
+
+    input {
+        width: 150px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 40px;
+    }
+
+    .title2 {
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        top: 0px;
+        left: 15px;
+        margin: 4px 0;
+    }
+    
+    .bar {
+        width: 22px;
+        height: 2px;
+    }
+
+    .noshow {
+        width: 150px;
+    }
+
+    .pics, .description {
+        margin-top: 15vh;
+    }
+
+    .navigation {
+        margin: 20px 0;
+    }
+
+    .top, .back, .next { 
+        margin: 0px 15px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box {
+        margin: 0px 0px 40px;
+    }
+
+    .box, .box2 {
+        width: 100vw;
+        height: auto;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        border-left: none;
+        border-right: none;
+    }
+
+    .star, .blank {
+        font-size: 30px;
+    }
+
+
+    @keyframes slide {
+        from {
+            margin-top: 100vh;
+        }
+
+        to {
+            margin-top: 0;
+        }
+    }  
+}
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 12px;
+        letter-spacing: .15em;
+    }
+    
+    a, input, button {
+        font-size: 12px;
+    } 
+
+    nav {
+        margin: 8px 0px 0px;
+    }
+
+    p, form { 
+        margin: 20px 50px 20px 75px;
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    input {
+        width: 150px;
+    }
+
+    button {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .title2 {
+        margin: 0 10px 20px 40px;
+    }
+
+    .menu {
+        left: 13px;
+    }
+    
+    .bar {
+        width: 20px;
+        height: 2px;
+        margin: 4px 0px;
+    }
+
+    .noshow {
+        width: 125px;
+    } 
+
+    .navigation {
+        margin-left: 10px;
+    }
+
+    .top, .back, .next { 
+        margin: 0px 5px;
+    }
+
+    .pics {
+        margin-left: 35px;
+    }
+
+    .outfit {
+        margin-bottom: 5px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .star, .blank {
+        font-size: 15px;
+    }
+}

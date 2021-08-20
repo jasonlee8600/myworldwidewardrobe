@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <title>About</title>
+
+        <meta name="author" content="Jason Lee">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+        <link rel="icon" href="../static/homeblock.jpg">
+
+        <script type="text/javascript">
+            function myFunction() {
+                document.getElementById("content").classList.toggle("show");
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <header> 
+            <div class="menu" onclick="myFunction()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div id="content" class="noshow">
+                    <a href="about.html">About</a>
+                    <a href="https://www.instagram.com/jasonlee.31/">Instagram</a>
+                </div>
+            </div>
+
+            <h1><a href="../index.html" class="title">My World Wide Wardrobe</a></h1> 
+            
+        </header>
+
+        <div class="pics">
+            <img src="../static/aboutfit.jpeg" alt="Black and grey outfit" class="outfit">
+
+            <div>
+                <a class="star star3"></a>
+                <a class="star star3"></a>
+                <a class="star star3"></a>
+                <a class="star star3"></a>
+                <a class="star star3"></a>
+            </div>
+        </div>
+
+        <div class="description">
+            
+            <h1 class="title2">About</h1>
+
+            <p>
+                Welcome to My World Wide Wardrobe, a website dedicated to showcasing my personal wardrobe, outfits, and style for the world to see. 
+                Outfits will be released on random dates to keep you guessing, but it will always be at 7pm EST.
+                Topics of discussion on this website include: fashion trends, concepts, and culture.
+            </p>
+
+            <p>
+                Email photos of your own outfits to jason.lee.jhl66@yale.edu to be featured on the website.
+            </p>
+
+            <p>   
+                Sumbit your email below to subscribe and receive newsletters.
+            </p>
+
+            <form method="POST" action="/index.html" name="subscribers" data-netlify="true" netlify>
+                <input required name="email" type="email" placeholder="Enter your email..." />
+                <button onclick="alert('You have successfully subscribed to the newsletter.')" type="submit">Submit</button>
+            </form>
+        </div>
+
+    </body>
+
+</html>
